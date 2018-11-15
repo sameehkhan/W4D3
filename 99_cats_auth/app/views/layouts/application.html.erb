@@ -1,8 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <% if current_user %>
     <h2>Welcome <%= current_user.user_name %> </h2>
-
+    <form class="" action="<%=session_url%>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="Logout">
+    <% else %>
+    <form class="" action="<%=new_session_url%>" method="get">
+      <input type="submit" value="Login">
+      
+    <% end %>
+    
+    
+  
+      
+    </form>
     <title>NinetyNineCats</title>
     <%= csrf_meta_tags %>
 
