@@ -1,0 +1,29 @@
+<style>
+  body {
+    background-color: #42bcf4;
+  
+    /* background-image: url('garfield.jpg'); */
+  }
+  
+</style>
+<body>
+<h1>Create New Account</h1>
+
+<form action="<%=users_url%>" method="post"> 
+  
+  <label for="user_name">Username:
+  <input type="text" name="user[user_name]" value="">
+  </label>
+  
+  <br>
+  <br>
+  
+  <label for="password">Password:
+  <input type="text" name="user[password]" value="">
+  </label>
+  <br>
+  <input type="submit" value="Create Account">
+  
+  
+</form>
+</body>
